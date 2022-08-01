@@ -1,1 +1,0 @@
-enum SpacerDirectionEnum { vertical, horizontal }

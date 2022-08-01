@@ -102,4 +102,22 @@ class AppBaseColors {
     800: Color(0xFF990000),
     900: Color(0xFF660000),
   };
+
+  static const MaterialColor blue = MaterialColor(
+    0xFF0576F0,
+    blueSwatch,
+  );
+
+  static const Map<int, Color> blueSwatch = {
+    50: Color(0xFFF5F7FF),
+    100: Color(0xFFE3FEFF),
+    200: Color(0xFF2AA8F8),
+    300: Color(0xFF50C8FC),
+    400: Color(0xFF2AA8F8),
+    500: Color(0xFF0576F0),
+    600: Color(0xFF005BD4),
+    700: Color(0xFF0041AC),
+    800: Color(0xFF002463),
+    900: Color(0xFF002463),
+  };
 }

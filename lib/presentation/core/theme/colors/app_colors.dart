@@ -7,6 +7,16 @@ class AppColors {
 
   AppColors(this.isLight);
 
+  List<BoxShadow> getShadow(Color? color) => [
+        if (isLight)
+          BoxShadow(
+            color: (color ?? AppBaseColors.lightTextColors.shade100)
+                .withOpacity(isLight ? 0.25 : 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 6),
+          ),
+      ];
+
   Color get surfaceColor50 => isLight
       ? AppBaseColors.lightSurfaceColors.shade50
       : AppBaseColors.darkSurfaceColors.shade50;
