@@ -24,7 +24,7 @@ class SerieDatasource implements ISerieDatasource {
           : parseSearchedSeries(response.data);
     }
 
-    //Shows not found
+    //Shows not found, pages ended
     if (response.statusCode == 404) {
       return [];
     }

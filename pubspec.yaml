@@ -27,6 +27,7 @@ dependencies:
   local_auth: ^2.1.1
   flutter_screen_lock: ^7.0.4
   crypto: ^3.0.2
+  mocktail: ^0.3.0
 
 
 dev_dependencies:
