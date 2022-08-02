@@ -26,9 +26,8 @@ class SerieSeasonEpisodes extends StatelessWidget {
           child: Text(
             'Season $season',
             overflow: TextOverflow.ellipsis,
-            style: context.textTheme.bodyText1!.copyWith(
+            style: context.textTheme.subtitle1!.copyWith(
               color: context.colorScheme.onSurface,
-              fontWeight: FontWeight.w600,
             ),
           ),
         ),

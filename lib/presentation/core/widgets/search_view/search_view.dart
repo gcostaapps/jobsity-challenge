@@ -50,8 +50,7 @@ class SearchView extends StatelessWidget {
                       children: <TextSpan>[
                         TextSpan(
                           text: search,
-                          style: context.textTheme.bodyText1!
-                              .copyWith(fontWeight: FontWeight.w600),
+                          style: context.textTheme.subtitle1,
                         ),
                       ],
                     ),

@@ -24,6 +24,7 @@ class AppBottomBarItem extends StatelessWidget {
       onTap: onTap,
       child: Container(
         height: kBottomNavigationBarHeight,
+        margin: const EdgeInsets.symmetric(vertical: Space.extraSmall2),
         color: Colors.transparent,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

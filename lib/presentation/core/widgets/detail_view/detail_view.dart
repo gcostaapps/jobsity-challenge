@@ -5,7 +5,7 @@ import '../../theme/theme.dart';
 import 'widgets/banner_gradient.dart';
 import 'widgets/detail_banner.dart';
 import 'widgets/detail_back_icon.dart';
-import 'widgets/serie_name_text.dart';
+import 'widgets/detail_name_text.dart';
 
 class DetailView extends StatelessWidget {
   const DetailView({
@@ -21,7 +21,7 @@ class DetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double imageHeight = MediaQuery.of(context).size.height * 0.4;
+    final double imageHeight = MediaQuery.of(context).size.height * 0.5;
 
     return Material(
       color: context.colorScheme.background,

@@ -50,13 +50,13 @@ class SerieEpisodeModel {
   factory SerieEpisodeModel.fromMap(Map<String, dynamic> map) {
     return SerieEpisodeModel(
       id: map['id']?.toInt() ?? 0,
-      name: map['name'] ?? '-',
+      name: map['name'] ?? 'Name not available',
       season: map['season']?.toInt() ?? 0,
       number: map['number']?.toInt() ?? 0,
       image: map['image'] != null
           ? ImageModel.fromMap(map['image'])
           : ImageModel.empty(),
-      summary: map['summary'] ?? '-',
+      summary: map['summary'] ?? 'Summary not available',
     );
   }
 

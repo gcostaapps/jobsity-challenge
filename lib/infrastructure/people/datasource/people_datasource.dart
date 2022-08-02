@@ -1,6 +1,6 @@
 import '../../../domain/people/peson_model.dart';
 import '../../../domain/serie/serie_model.dart';
-import '../../core/http_client/http_client.dart';
+import '../../../domain/core/http_client/http_client.dart';
 import '../repository/i_people_datasource.dart';
 
 class PeopleDatasource implements IPeopleDatasource {
@@ -19,7 +19,7 @@ class PeopleDatasource implements IPeopleDatasource {
     final response = await client.get(url);
 
     if (response.isSuccess()) {
-      //TODO Use compute to avoid blocking UI while parsing
+      //TODO Use compute to avoid blocking UI in lower end devices while parsing
       return searchEmpty
           ? parsePersons(response.data)
           : parseSearchedPersons(response.data);

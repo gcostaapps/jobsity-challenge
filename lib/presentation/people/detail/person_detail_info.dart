@@ -35,10 +35,8 @@ class PersonDetailInfo extends StatelessWidget {
                 child: Text(
                   'Movies and TV shows',
                   overflow: TextOverflow.ellipsis,
-                  style: context.textTheme.bodyText1!.copyWith(
-                    color: context.colorScheme.onSurface,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: context.textTheme.subtitle1!
+                      .copyWith(color: context.colorScheme.onSurface),
                 ),
               ),
             ),
@@ -53,9 +51,8 @@ class PersonDetailInfo extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   textAlign: TextAlign.center,
-                  style: context.textTheme.bodyText2!.copyWith(
+                  style: context.textTheme.subtitle2!.copyWith(
                     color: context.colorScheme.error,
-                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
@@ -67,9 +64,8 @@ class PersonDetailInfo extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
                   textAlign: TextAlign.center,
-                  style: context.textTheme.bodyText2!.copyWith(
+                  style: context.textTheme.subtitle2!.copyWith(
                     color: context.colorScheme.onBackground,
-                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),

@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 
-import 'http_client.dart';
-import 'http_response.dart';
+import '../../../domain/core/http_client/http_client.dart';
+import '../../../domain/core/http_client/http_response.dart';
 
 class DioClient implements IHttpClient {
   final Dio client;

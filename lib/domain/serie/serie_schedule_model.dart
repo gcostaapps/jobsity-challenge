@@ -29,8 +29,10 @@ class SerieScheduleModel {
 
   factory SerieScheduleModel.fromMap(Map<String, dynamic> map) {
     return SerieScheduleModel(
-      time: map['time'] ?? '-',
-      days: map['days'] != null ? List<String>.from(map['days']) : ['-'],
+      time: map['time'] ?? 'Time not available',
+      days: map['days'] != null
+          ? List<String>.from(map['days'])
+          : ['Days not available'],
     );
   }
 

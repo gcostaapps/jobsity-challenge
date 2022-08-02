@@ -22,9 +22,8 @@ class SerieSummary extends StatelessWidget {
           Text(
             'Summary',
             overflow: TextOverflow.ellipsis,
-            style: context.textTheme.bodyText1!.copyWith(
+            style: context.textTheme.subtitle1!.copyWith(
               color: context.colorScheme.onSurface,
-              fontWeight: FontWeight.w600,
             ),
           ),
           const Spacing.vertical(Space.small),

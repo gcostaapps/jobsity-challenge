@@ -12,8 +12,7 @@ class DetailBackButton extends StatelessWidget {
     return Positioned(
       top: Space.large2,
       left: Space.medium,
-      child: Container(
-        padding: const EdgeInsets.all(Space.extraSmall),
+      child: DecoratedBox(
         decoration: BoxDecoration(
           color: context.colorScheme.surface.withOpacity(0.8),
           borderRadius: BorderRadius.circular(BorderSize.medium),

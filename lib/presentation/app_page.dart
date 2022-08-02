@@ -2,7 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../application/favorite/favorite_cubit.dart';
 import 'core/theme/app_theme.dart';
 import 'core/theme/colors/app_base_colors.dart';
 import 'home_page.dart';
@@ -12,22 +14,26 @@ class AppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme().buildThemeData(
-        primarySwatch: AppBaseColors.blue,
-        secondarySwatch: AppBaseColors.blue,
-        brightness: Brightness.light,
+    return BlocProvider(
+      create: (context) => FavoriteCubit(context.read())..getFavorites(),
+      lazy: false,
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme().buildThemeData(
+          primarySwatch: AppBaseColors.blue,
+          secondarySwatch: AppBaseColors.blue,
+          brightness: Brightness.light,
+        ),
+        darkTheme: AppTheme().buildThemeData(
+          primarySwatch: AppBaseColors.blue,
+          secondarySwatch: AppBaseColors.blue,
+          brightness: Brightness.dark,
+        ),
+        useInheritedMediaQuery: true,
+        scrollBehavior: kReleaseMode ? null : MyCustomScrollBehavior(),
+        home: const HomePage(),
       ),
-      darkTheme: AppTheme().buildThemeData(
-        primarySwatch: AppBaseColors.blue,
-        secondarySwatch: AppBaseColors.blue,
-        brightness: Brightness.dark,
-      ),
-      useInheritedMediaQuery: true,
-      scrollBehavior: kReleaseMode ? null : MyCustomScrollBehavior(),
-      home: const HomePage(),
     );
   }
 }

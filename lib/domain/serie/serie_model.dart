@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 
-import 'serie_episode_model.dart';
 import '../core/serie_image_model.dart';
+import 'serie_episode_model.dart';
+
 import 'serie_schedule_model.dart';
 
 class SerieModel {
@@ -49,7 +50,9 @@ class SerieModel {
       id: map['id']?.toInt() ?? 0,
       name: map['name'] ?? '',
       summary: map['summary'] ?? '',
-      genres: map['genres'] != null ? List<String>.from(map['genres']) : ['-'],
+      genres: map['genres'] != null
+          ? List<String>.from(map['genres'])
+          : ['Genres not available'],
       schedule: SerieScheduleModel.fromMap(map['schedule']),
       image: map['image'] != null
           ? ImageModel.fromMap(map['image'])
@@ -93,4 +96,18 @@ class SerieModel {
         image.hashCode ^
         episodes.hashCode;
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'summary': summary,
+      'genres': genres,
+      'schedule': schedule.toMap(),
+      'image': image.toMap(),
+      'episodes': episodes.map((x) => x.toMap()).toList(),
+    };
+  }
+
+  String toJson() => json.encode(toMap());
 }
