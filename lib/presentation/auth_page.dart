@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../application/local_auth/local_auth_cubit.dart';
 import '../domain/core/local_auth/local_auth_enum.dart';
-import '../utils/custom_screen_lock.dart';
+import 'utils/custom_screen_lock.dart';
 import 'core/spacing/spacing.dart';
 import 'core/theme/theme.dart';
 

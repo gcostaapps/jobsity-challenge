@@ -28,7 +28,7 @@ import 'infrastructure/people/repository/people_repository.dart';
 import 'infrastructure/serie/datasource/serie_datasource.dart';
 import 'infrastructure/serie/repository/i_serie_datasource.dart';
 import 'infrastructure/serie/repository/serie_repository.dart';
-import 'utils/app_bloc_observer.dart';
+import 'application/app_bloc_observer.dart';
 
 class ApplicationStartConfig {
   Future<void> configureApp(Widget appWidget) async {
